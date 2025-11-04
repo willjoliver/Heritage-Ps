@@ -1,0 +1,55 @@
+# Heritage Payment Solutions - Git Ignore File
+
+# Backup files
+*.bak
+*_bak
+*.html_bak
+backups/
+*.zip
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Server configuration (may contain sensitive data)
+# Uncomment if you add these files:
+# .htaccess
+# php.ini
+# .env
+
+# CGI scripts (if they contain sensitive data)
+# cgi-bin/
+
+# FTP/SFTP configuration
+.ftpconfig
+sftp-config.json
+
+# Database dumps
+*.sql
+*.sqlite
+*.db

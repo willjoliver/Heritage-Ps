@@ -1,0 +1,67 @@
+# RewriteEngine on
+# RewriteRule ^(.*)$ https://www.JUMPEM.com/$1 [R=301,L]
+
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} /+[^\.]+$
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} \ (.*)//+(.*)\  [NC]
+RewriteRule .* %1/%2 [R=301,L]
+
+<FilesMatch "\.(htm|html|php)$">
+    <IfModule mod_headers.c>
+        BrowserMatch MSIE ie
+        Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+<files *.html>
+SetOutputFilter DEFLATE
+</files>
+
+RedirectMatch 301 ^/index/$ https://www.heritageps.net/
+
+RedirectMatch 301 ^/review/$ https://www.google.com/search?_ga=2.111306119.228315325.1525876596-740463015.1521659643&ludocid=15647682277269033712&hl=en&q=Heritage%20Payment%20Solutions%20616%20Dr.%20Calvin%20Jones%20Hwy.%20Suite%20100%20Wake%20Forest%2C%20NC%2027587&#lrd=0x89ac5139c8c8e3df:0xd927bc204ecbd2f0,3,,,
+
+RedirectMatch 301 ^/privacy/$ https://www.heritageps.net/privacy-policy/
+RedirectMatch 301 ^/firstpaypos/$ https://www.heritageps.net/1stpaypos/
+RedirectMatch 301 ^/emv/$ https://www.heritageps.net/emv-and-nfc/
+RedirectMatch 301 ^/hpsa/$ https://www.heritageps.net/
+RedirectMatch 301 ^/agents.php$ https://www.heritageps.net/
+RedirectMatch 301 ^/products_services.php$ https://www.heritageps.net/product-solutions/
+RedirectMatch 301 ^/contact.php$ https://www.heritageps.net/contact/
+RedirectMatch 301 ^/public/affiliates/$ https://www.heritageps.net/affiliates/

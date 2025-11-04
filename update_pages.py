@@ -10,6 +10,7 @@ import re
 
 # List of files that need updating
 files_to_update = [
+    "about/index.php",
     "northstatebank/index.php",
     "services/index.php",
     "emv-and-nfc/index.php",
@@ -31,8 +32,9 @@ files_to_update = [
 # Base directory
 base_dir = "/Users/jordanoliver/Documents/Heritage-Ps"
 
-# Pattern to find and remove duplicate header closing
-header_pattern = r'<div class="content"><div class="container"><div class="row"></div></div></div></header>'
+# Pattern to find and remove duplicate header closing (both versions)
+header_pattern1 = r'<div class="content"><div class="container"><div class="row"></div></div></div></header>'
+header_pattern2 = r'\s*<div class="content">\s*<div class="container">\s*<div class="row"></div>\s*</div>\s*</div>\s*</header>'
 
 # Pattern to find the footer and everything after
 footer_pattern = r'</section><footer id="footer".*?</html>'
@@ -48,10 +50,13 @@ def update_file(filepath):
         
         original_content = content
         
-        # Step 1: Remove duplicate header closing
-        if header_pattern in content:
-            content = content.replace(header_pattern, '')
+        # Step 1: Remove duplicate header closing (try both patterns)
+        if header_pattern1 in content:
+            content = content.replace(header_pattern1, '')
             print(f"  ✓ Removed duplicate header closing")
+        elif re.search(header_pattern2, content):
+            content = re.sub(header_pattern2, '', content)
+            print(f"  ✓ Removed duplicate header closing (with whitespace)")
         
         # Step 2: Replace footer with include
         content = re.sub(footer_pattern, footer_replacement, content, flags=re.DOTALL)

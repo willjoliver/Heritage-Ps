@@ -1042,13 +1042,6 @@ $phone_link = "8775904629";
 $header_class = "text-center alt services";
 include $_SERVER["DOCUMENT_ROOT"] . "/includes/header.php";
 ?>
-
-        <div class="content">
-            <div class="container">
-                <div class="row"></div>
-            </div>
-        </div>
-    </header>
     <section id="content">
         <div class="breadcrumbs-heading">
             <div class="bottom">

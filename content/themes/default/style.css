@@ -713,3 +713,83 @@ form input.submit:hover {background:transparent!important;border-color:#6CBB4E;c
 @media(min-width:993px) and (max-width:1199px){
 	#nav-container .btn {min-width:100px;}
 }
+
+/* IMPROVED DROPDOWN AND MENU CENTERING */
+
+/* Center the main navigation - High specificity to override inline styles */
+@media(min-width:768px){
+    /* Main navigation container */
+    #nav-container #nav > ul.nav-centered {
+        text-align: center !important;
+        display: block !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+    
+    /* Individual navigation items - Override inline styles */
+    #nav-container #nav > ul.nav-centered > li {
+        display: inline-block !important;
+        margin: 0 0.1rem !important; /* Minimal spacing between menu items */
+        padding: 0 !important;
+        vertical-align: top !important;
+    }
+    
+    /* Navigation links styling - Override inline styles */
+    #nav-container #nav > ul.nav-centered > li > a {
+        padding: 1rem 1rem !important;
+        font-size: 1.4rem !important; /* Increased from 1.1rem */
+        text-align: center !important;
+        border-right: none !important; /* Remove right borders */
+        white-space: nowrap !important;
+        display: inline-block !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Remove border from last item override */
+    #nav-container #nav > ul.nav-centered li:last-of-type a {
+        border-right: none !important;
+        padding-right: 1rem !important;
+    }
+    
+    /* Improved dropdown styling */
+    #nav > ul > .dropdown:hover .dropdown-menu:before {
+        content: " "; 
+        display: block; 
+        height: 10px; 
+        background: transparent; 
+        width: 100%;
+    } 
+    
+    #nav > ul > .dropdown:hover .dropdown-menu {
+        padding: 1.5rem 0;
+        border-radius: 0;
+        border: 0;
+        margin-top: 0;
+        border-top: 1px solid transparent;
+        background: #006db5;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        min-width: 250px; /* Increased from 18rem */
+    }
+    
+    #nav > ul > .dropdown .dropdown-menu {
+        min-width: 250px; /* Increased width */
+    }
+    
+    #nav > ul > .dropdown:hover .dropdown-menu li {
+        padding: 0.5rem 0; /* Added padding between dropdown items */
+    }
+    
+    #nav > ul > .dropdown:hover .dropdown-menu li a {
+        color: #FFF !important;
+        display: block;
+        padding: 0.8rem 2rem; /* Increased padding inside dropdown items */
+        font-size: 1.4rem; /* Slightly larger font */
+        white-space: nowrap;
+    }
+    
+    #nav > ul > .dropdown:hover .dropdown-menu li:hover a {
+        color: #333 !important;
+        background: rgba(255, 255, 255, 0.9);
+    }
+}

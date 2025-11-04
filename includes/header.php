@@ -16,6 +16,7 @@ if (!isset($phone_link)) $phone_link = '8775904629';
 if (!isset($active_page)) $active_page = '';
 if (!isset($header_class)) $header_class = 'text-center alt services';
 ?>
+<header class="<?php echo $header_class; ?>">
 <div class="header-top hidden-xs">
     <div class="container">
         <div class="row">
@@ -51,36 +52,48 @@ if (!isset($header_class)) $header_class = 'text-center alt services';
                 </a>
             </div>
             <div id="nav" class="collapse navbar-collapse">
-                <ul class="float-left">
-                    <li class="<?php echo ($active_page == 'about') ? 'active' : ''; ?>">
-                        <a href="https://www.heritageps.net/about/" title="About">About</a>
+                <ul class="nav-centered">
+                    <li class="dropdown <?php echo ($active_page == 'about' || $active_page == 'why-heritage' || $active_page == 'industries-served') ? 'active' : ''; ?>">
+                        <a href="https://www.heritageps.net/about/" title="About" class="dropdown-toggle" data-toggle="dropdown">
+                            About <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="<?php echo ($active_page == 'why-heritage') ? 'active' : ''; ?>">
+                                <a href="https://www.heritageps.net/why-heritage/" title="Why Heritage">Why Heritage</a>
+                            </li>
+                            <li class="<?php echo ($active_page == 'industries-served') ? 'active' : ''; ?>">
+                                <a href="https://www.heritageps.net/industries-served/" title="Industries Served">Industries Served</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="<?php echo ($active_page == 'why-heritage') ? 'active' : ''; ?>">
-                        <a href="https://www.heritageps.net/why-heritage/" title="Why Heritage">Why Heritage</a>
+                    <li class="dropdown <?php echo ($active_page == 'services' || $active_page == 'integrated-payments') ? 'active' : ''; ?>">
+                        <a href="https://www.heritageps.net/services/" title="Services" class="dropdown-toggle" data-toggle="dropdown">
+                            Services <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="<?php echo ($active_page == 'integrated-payments') ? 'active' : ''; ?>">
+                                <a href="https://www.heritageps.net/integrated-payments/" title="Integrated Payment Systems">Integrated Payment Systems</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="<?php echo ($active_page == 'industries-served') ? 'active' : ''; ?>">
-                        <a href="https://www.heritageps.net/industries-served/" title="Industries Served">Industries Served</a>
-                    </li>
-                    <li class="<?php echo ($active_page == 'services') ? 'active' : ''; ?>">
-                        <a href="https://www.heritageps.net/services/" title="Services">Services</a>
-                    </li>
-                    <li class="<?php echo ($active_page == 'integrated-payments') ? 'active' : ''; ?>">
-                        <a href="https://www.heritageps.net/integrated-payments/" title="Integrated Payment Systems">Integrated Payment Systems</a>
-                    </li>
-                    <li class="<?php echo ($active_page == 'product-solutions') ? 'active' : ''; ?>">
-                        <a href="https://www.heritageps.net/product-solutions/" title="Product Solutions">Product Solutions</a>
+                    <li class="dropdown <?php echo ($active_page == 'product-solutions' || $active_page == 'edge' || $active_page == 'etrak' || $active_page == 'sixpac') ? 'active' : ''; ?>">
+                        <a href="https://www.heritageps.net/product-solutions/" title="Product Solutions" class="dropdown-toggle" data-toggle="dropdown">
+                            Product Solutions <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="<?php echo ($active_page == 'edge') ? 'active' : ''; ?>">
+                                <a href="https://www.heritageps.net/edge/" title="Edge">Edge</a>
+                            </li>
+                            <li class="">
+                                <a href="https://etrak.com/" target="_blank" title="Etrak">Etrak</a>
+                            </li>
+                            <li class="<?php echo ($active_page == 'sixpac') ? 'active' : ''; ?>">
+                                <a href="https://www.heritageps.net/sixpac/" title="SixPac">SixPac</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="<?php echo ($active_page == 'partners') ? 'active' : ''; ?>">
                         <a href="https://www.heritageps.net/partners/" title="Partners">Partners</a>
-                    </li>
-                    <li class="<?php echo ($active_page == 'edge') ? 'active' : ''; ?>">
-                        <a href="https://www.heritageps.net/edge/" title="Edge">Edge</a>
-                    </li>
-                    <li class="">
-                        <a href="https://etrak.com/" target="_blank" title="Etrak">Etrak</a>
-                    </li>
-                    <li class="<?php echo ($active_page == 'sixpac') ? 'active' : ''; ?>">
-                        <a href="https://www.heritageps.net/sixpac/" title="SixPac">SixPac</a>
                     </li>
                     <li class="<?php echo ($active_page == 'affiliates') ? 'active' : ''; ?>">
                         <a href="https://www.heritageps.net/affiliates/" title="Affiliates">Affiliates</a>
@@ -94,3 +107,5 @@ if (!isset($header_class)) $header_class = 'text-center alt services';
         </div>
     </nav>
 </div>
+<div class="content"><div class="container"><div class="row"></div></div></div>
+</header>

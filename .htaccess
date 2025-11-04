@@ -4,6 +4,25 @@
 Options +FollowSymLinks
 RewriteEngine on
 
+# Security Headers
+<IfModule mod_headers.c>
+    # Prevent MIME type sniffing
+    Header set X-Content-Type-Options "nosniff"
+    
+    # Prevent clickjacking attacks
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # Enable XSS protection
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Control referrer information
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Remove server information
+    Header unset Server
+    Header unset X-Powered-By
+</IfModule>
+
 RewriteCond %{HTTP_HOST} !^www\.
 RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [R=301,L]
 

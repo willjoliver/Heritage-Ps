@@ -10,6 +10,7 @@
 </script>
 
 </head>
+<?php
 $active_page = "about";
 $phone = "(919) 453-1204";
 $phone_link = "9194531204";

@@ -1209,46 +1209,4 @@ include $_SERVER["DOCUMENT_ROOT"] . "/includes/header.php";
                 </div>
             </div>
         </div>
-    </section>
-    <footer id="footer" class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12"><img src="/content/uploads/media/new-images/logo-footer.png" alt="Heritage Payment Solutions Logo" />
-                    <p style="font-size:1.3rem;margin-top:.5rem;">Heritage Payment Solutions is a registered ISO of Fifth Third Bank, N.A., Cincinnati, OH.</p>
-                </div><a href="#post-60" title="Back to top" class="back-to-top"><i class="fa fa-angle-up" aria-hidden="true"></i><span class="hidden">Back to Top</span></a></div>
-        </div>
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 text-left"><span class="text-uppercase">Copyright &copy; 2019 | Heritage Payment Solutions <span></span>All Rights Reserved. <a href="/privacy-policy/" title="Privacy Policy">Privacy Policy</a></span>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 text-right"><span><a href="https://www.jumpem.com/" title="Jumpem Internet Marketing" target="_blank">Website Design &amp; Marketing by</a> <span class="jumpem">Jumpem</span></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div id="mobile-footer">
-        <ul class="x2">
-            <li><a href="tel:9194531204" title="Give us a call"><span><i class="hidden-xs fa fa-mobile"></i>Call Us</span></a></li>
-            <li><a href="/review/" target="_blank" title="Review Heritage Payment Solutions"><span><i class="hidden-xs fa fa-thumbs-up"></i>Review Us</span></a></li>
-        </ul>
-    </div>
-    <div id="banner-top"><span>Call Now To Get Started! (919) 453-1204</span></div>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans:400,600,700,800,700italic,600italic,400italic" />
-    <link rel="stylesheet" href="https://www.heritageps.net/content/themes/default/_/css/header.css">
-    <link rel="stylesheet" href="https://www.heritageps.net/content/themes/default/_/css/footer.css">
-    <link rel="stylesheet" href="https://www.heritageps.net/content/themes/default/style.css?v2">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/additional-methods.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <script src="https://www.heritageps.net/content/themes/default/app.js?V2"></script>
-</body>
-
-</html>
+    </section><?php include $_SERVER["DOCUMENT_ROOT"] . "/includes/footer.php"; ?>

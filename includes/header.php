@@ -30,9 +30,6 @@ if (!isset($header_class)) $header_class = 'text-center alt services';
                     <span class="borders hidden"><a target="_blank" href="#" title="">Rep Login</a></span>
                     <span class="phone"><i class="fa fa-mobile-phone"></i> <?php echo $phone; ?></span>
                     <a href="/contact/" title="" class="btn btn-green" style="margin-left:15px;">Get Started Now</a>
-                    <a target="_blank" href="https://twitter.com/Heritageps" title="Heritage Payment Solutions Twitter" style="margin-left:10px;font-size:2.4rem;">
-                        <i class="fa fa-twitter-square"></i>
-                    </a>
                 </div>
             </div>
         </div>
